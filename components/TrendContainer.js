@@ -35,7 +35,7 @@ class TrendContainer extends Component {
         
         const { listTrends } = this.state;
         return(
-          <View  style={styleContainerTrend.container}>
+          <View  >
             <ScrollView contentContainerStyle={styleContainerTrend.container}>
                 {listTrends.sort((a,b) => b[0] - a[0]).map((item, index) =>
                 <Trend

@@ -28,6 +28,7 @@ class TouitContainer extends Component {
         });
         console.log(notificationId); // can be saved in AsyncStorage or send to server
       };
+
     state = {
         fontLoaded: false,
       };
@@ -59,8 +60,13 @@ class TouitContainer extends Component {
             ts = response.ts;
             touits = response.messages.reverse().concat(touits);
 
+
+
             touits = touits.filter( (touit, index, list) => {
                 let next = list[index+1];
+                if (next){
+                    sendNotificationImmediately();
+                }
                 if (next && (touit.message == next.message && touit.name == next.name)){
                     if(touit.nbSpam){
                         next.nbSpam = touit.nbSpam + 1;

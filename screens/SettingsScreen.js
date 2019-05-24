@@ -5,6 +5,14 @@ import { ScrollView, StyleSheet, Platform} from 'react-native';
 export default class SettingsScreen extends React.Component {
   static navigationOptions = {
     title: 'Trends',
+    headerStyle: {
+      
+      backgroundColor: '#260D0A',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
 
   render() {
@@ -12,15 +20,14 @@ export default class SettingsScreen extends React.Component {
       <ScrollView style={styles.container}>
         <TrendContainer/>
       </ScrollView>
-    )
-      
+    ) 
   }
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#260D0A',
   },
   developmentModeText: {
     marginBottom: 20,

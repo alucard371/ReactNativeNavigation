@@ -6,6 +6,14 @@ import TouitContainer from '../components/TouitContainer';
 export default class LinksScreen extends React.Component {
   static navigationOptions = {
     title: 'Touits',
+    headerStyle: {
+      
+      backgroundColor: '#260D0A',
+    },
+    headerTintColor: '#fff',
+    headerTitleStyle: {
+      fontWeight: 'bold',
+    },
   };
 
   render() {
@@ -20,7 +28,6 @@ export default class LinksScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    paddingTop: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '#260D0A',
   },
 });

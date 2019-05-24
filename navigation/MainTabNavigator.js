@@ -8,47 +8,47 @@ import LinksScreen from '../screens/LinksScreen';
 import SettingsScreen from '../screens/SettingsScreen';
 
 const HomeStack = createStackNavigator({
-  Home: HomeScreen,
+  SendTouit: HomeScreen,
 });
 
 HomeStack.navigationOptions = {
-  tabBarLabel: 'Home',
+  tabBarLabel: 'Send Touit',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
       name={
         Platform.OS === 'ios'
-          ? `ios-information-circle${focused ? '' : '-outline'}`
-          : 'md-information-circle'
+          ? `ios-phone-portrait${focused ? '' : '-outline'}`
+          : 'md-phone-portrait'
       }
     />
   ),
 };
 
 const LinksStack = createStackNavigator({
-  Links: LinksScreen,
+  Touits: LinksScreen,
 });
 
 LinksStack.navigationOptions = {
-  tabBarLabel: 'Links',
+  tabBarLabel: 'Touits List',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-link' : 'md-link'}
+      name={Platform.OS === 'ios' ? 'ios-reorder' : 'md-reorder'}
     />
   ),
 };
 
 const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+  Trends: SettingsScreen,
 });
 
 SettingsStack.navigationOptions = {
-  tabBarLabel: 'Settings',
+  tabBarLabel: 'Trends List',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
       focused={focused}
-      name={Platform.OS === 'ios' ? 'ios-options' : 'md-options'}
+      name={Platform.OS === 'ios' ? 'ios-paper' : 'md-paper'}
     />
   ),
 };
