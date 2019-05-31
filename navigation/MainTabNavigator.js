@@ -4,8 +4,8 @@ import { createStackNavigator, createBottomTabNavigator } from 'react-navigation
 
 import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
-import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import TouitsScreen from '../screens/TouitsScreen';
+import TrendsScreen from '../screens/TrendsScreen';
 
 const HomeStack = createStackNavigator({
   SendTouit: HomeScreen,
@@ -25,11 +25,11 @@ HomeStack.navigationOptions = {
   ),
 };
 
-const LinksStack = createStackNavigator({
-  Touits: LinksScreen,
+const TouitsStack = createStackNavigator({
+  Touits: TouitsScreen,
 });
 
-LinksStack.navigationOptions = {
+TouitsStack.navigationOptions = {
   tabBarLabel: 'Touits List',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -39,11 +39,11 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Trends: SettingsScreen,
+const TrendsStack = createStackNavigator({
+  Trends: TrendsScreen,
 });
 
-SettingsStack.navigationOptions = {
+TrendsStack.navigationOptions = {
   tabBarLabel: 'Trends List',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -55,6 +55,6 @@ SettingsStack.navigationOptions = {
 
 export default createBottomTabNavigator({
   HomeStack,
-  LinksStack,
-  SettingsStack,
+  TouitsStack,
+  TrendsStack,
 });

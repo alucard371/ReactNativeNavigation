@@ -3,12 +3,6 @@ import { Platform, StatusBar, StyleSheet, View, ScrollView } from 'react-native'
 import { AppLoading, Asset, Font, Icon } from 'expo';
 import AppNavigator from './navigation/AppNavigator';
 
-import Title from './components/Title';
-import TouitContainer from './components/TouitContainer';
-import SendMessageForm from './components/SendMessageForm';
-import TrendContainer from './components/TrendContainer';
-import Footer from './components/Footer';
-
 export default class App extends React.Component {
   state = {
     isLoadingComplete: false,
@@ -26,20 +20,8 @@ export default class App extends React.Component {
     } else {
       return (
         <View style={styles.container}>
-        {/* <Title/>
-         */}
-        {/* <ScrollView> */}
-        
-          {/* <SendMessageForm/>
-          <TouitContainer/>
-          <TrendContainer/>
-          <Footer/> */}
-          
-        {/* </ScrollView> */}
         {Platform.OS === 'ios' && <StatusBar barStyle="default" />}
         <AppNavigator />
-          
-          
         </View>
       );
     }

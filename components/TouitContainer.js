@@ -135,10 +135,6 @@ class TouitContainer extends Component {
         }
     }
 
-    showActivity = () => {
-        if (this.state.count > 0){   
-    }}
-
     render() {
         const {touits} = this.state;
         

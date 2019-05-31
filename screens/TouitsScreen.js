@@ -3,11 +3,10 @@ import { ScrollView, StyleSheet } from 'react-native';
 import TouitContainer from '../components/TouitContainer';
 
 
-export default class LinksScreen extends React.Component {
+export default class TouitsScreen extends React.Component {
   static navigationOptions = {
     title: 'Touits',
     headerStyle: {
-      
       backgroundColor: '#260D0A',
     },
     headerTintColor: '#fff',
